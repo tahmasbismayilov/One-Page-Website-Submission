@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+</head>
+<body>
+    <header class="header">
+        <h1>Photo Showcase</h1>
+        <p>Explore our collection and click on any photo to view details</p>
+    </header>
+    
+    <main class="container">
+        <section class="photo-collection">
+            <div class="photo-card" onclick="openModal(0)">
+                <img src="https://picsum.photos/id/10/400/300" alt="Landscape">
+                <div class="photo-info">
+                    <h3>Landscape</h3>
+                </div>
+            </div>
+            
+            <div class="photo-card" onclick="openModal(1)">
+                <img src="https://picsum.photos/id/11/400/300" alt="Forest">
+                <div class="photo-info">
+                    <h3>Forest</h3>
+                </div>
+            </div>
+            
+            <div class="photo-card" onclick="openModal(2)">
+                <img src="https://picsum.photos/id/12/400/300" alt="Waterfall">
+                <div class="photo-info">
+                    <h3>Waterfall</h3>
+                </div>
+            </div>
+            
+            <div class="photo-card" onclick="openModal(3)">
+                <img src="https://picsum.photos/id/13/400/300" alt="Mountains">
+                <div class="photo-info">
+                    <h3>Mountains</h3>
+                </div>
+            </div>
+            
+            <div class="photo-card" onclick="openModal(4)">
+                <img src="https://picsum.photos/id/14/400/300" alt="Beach">
+                <div class="photo-info">
+                    <h3>Beach</h3>
+                </div>
+            </div>
+            
+            <div class="photo-card" onclick="openModal(5)">
+                <img src="https://picsum.photos/id/15/400/300" alt="Sunset">
+                <div class="photo-info">
+                    <h3>Sunset</h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Lightbox -->
+    <div id="photoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/10/800/600" alt="Landscape">
+                        <div class="caption">Beautiful Landscape</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/11/800/600" alt="Forest">
+                        <div class="caption">Forest View</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/12/800/600" alt="Waterfall">
+                        <div class="caption">Magnificent Waterfall</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/13/800/600" alt="Mountains">
+                        <div class="caption">Mountain Range</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/14/800/600" alt="Beach">
+                        <div class="caption">Tropical Beach</div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://picsum.photos/id/15/800/600" alt="Sunset">
+                        <div class="caption">Golden Sunset</div>
+                    </div>
+                </div>
+                
+                <button class="nav-button prev-button" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="nav-button next-button" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            
+            <div class="dots-container">
+                <span class="dot" onclick="jumpToSlide(0)"></span>
+                <span class="dot" onclick="jumpToSlide(1)"></span>
+                <span class="dot" onclick="jumpToSlide(2)"></span>
+                <span class="dot" onclick="jumpToSlide(3)"></span>
+                <span class="dot" onclick="jumpToSlide(4)"></span>
+                <span class="dot" onclick="jumpToSlide(5)"></span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Photo Showcase. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html> 
